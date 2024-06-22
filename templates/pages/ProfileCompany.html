@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SmartJobFinder</title>
+    <meta charset="utf-8">
+    <!-- icon websayt -->
+    <link rel="icon" href="{% static 'images/logo.jpg' %}">
+    <!--style homepage flex -->
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css' rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <!-- Start Nav -->
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container-fluid px-md-4	">
+			<a class="navbar-brand" ><img src='/static/images/logo.jpg' style="width:75px;height:50px;"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu" style="color:#fbcf0b;"></span> <span style="color:#fbcf0b;">Menu</span>
+	      </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="{% url 'HomeCom' %}" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="{% url 'ProfileCompany' %}" class="nav-link">Profile</a></li>
+                    <li class="nav-item"><a href="{% url 'employeer' %}" class="nav-link">SearchEmployees</a></li>
+                    <li class="nav-item"><a href="{% url 'contactusCom' %}" class="nav-link">Contact Us</a></li>
+                    <li class="nav-item"><a href="{% url 'Homepage' %}" class="nav-link">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <!-- END Nav -->
+
+
+    <section class="bg-light" id="bg-light">
+        <div class="container" style="padding-bottom: 210px;">
+            <div class="col-lg-12 pr-lg-12">
+                <div class="card-deck" style="padding-top: 60px; display: flex; justify-content: center;">
+
+                    <div class="card col-lg-4 col-md-6 col-sm-12" style="background-color:#4a4e50;border-radius:30px;border:3px solid #fbcd0b">
+                        <div>
+                            <center style="margin-top: 29px;">
+
+                                            <img class="card-img-top" src='/static/images/user.png' style="width:170px;height:150px;" alt="Pharmacy image">
+                            </center>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align:center;color:white;">{{data.companyname}}</h5>
+                            <hr>
+                            <p>
+								<h6 class="card-title" style="text-align:center;color:white;">{{data.e_mail}}</h6>
+                            </p>
+                            <form method="POST">
+                                {% csrf_token %}
+                                <button type="submit"
+                                style="    
+                                background-color: #fbcf0b;
+                                border-radius: 12px;
+                                color: #000;
+                                cursor: pointer;
+                                font-weight: bold;
+                                padding: 10px 15px;
+                                text-align: center;
+                                transition: 200ms;
+                                width: 100%;
+                                box-sizing: border-box;
+                                border: 0;
+                                font-size: 16px;
+                                user-select: none;
+                                -webkit-user-select: none;
+                                touch-action: manipulation">      Edit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

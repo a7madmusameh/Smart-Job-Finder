@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>SmartJobFinder</title>
+<link rel="stylesheet" href="{% static './login.css' %}">
+  
+</head>
+<body>
+	<!-- Start Loginpage -->
+	<form method="POST" >
+		{% csrf_token %}
+		<h3>Login Here</h3>
+		<label for="username">Email Address</label>
+		<input id="signup_Email" type="email" placeholder="Email" name="Email" required>
+	
+		<label for="password">Password</label>
+		<input id="signup_Password" type="password"  data-type="password" name="password" required>
+	
+		<button>Log In</button>
+		<div class="hr"></div>
+		<div class="foot-lnk">
+			<a href="{% url 'Homepage' %}" class="hide-password">Back</a>
+		</div>
+	</form>
+		<!-- END Loginpage -->
+
+</body>
+</html>

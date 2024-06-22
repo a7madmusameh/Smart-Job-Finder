@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SmartJobFinder</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="{% static 'images/logo.jpg' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uncovering Opportunities through Data Mining</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/stylecontactus.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contactus.css' %}"> 
+    <style>
+
+
+.Back {
+        display: inline-block;
+        padding: 15px 25px;
+        font-size: 24px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #000000;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #666;
+        }
+
+.Back:hover {background-color: #1b7594}
+
+.Back:active {
+  background-color: #1b7594;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+    </style>
+</head>
+<body>
+<div id="stars"></div>
+<div id="stars2"></div>
+<div id="stars3"></div>
+    <div>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Have a question or want to get in touch? Fill out the form below and we'll get back to you as soon as possible.</p>
+            <form method="POST">
+                {% csrf_token %}
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                <button type="submit" >Send Message</button> 
+            </form>
+            <a href="{% url 'Homepage' %}" class="hide-password"><button type="submit" class="Back">Back</button> </a>
+        </section>
+    </div>
+</body>
+</html>

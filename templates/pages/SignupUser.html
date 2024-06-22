@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <title>SmartJobFinder</title>
+  <link rel="icon" href="{% static 'images/logo.jpg' %}">
+  <link rel="stylesheet" href="{% static './signupuser.css' %}">
+</head>
+<body>
+	<!-- Start signup Company -->
+	<form method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		<h3>Signup User</h3>
+	
+		<label for="username">UserName</label>
+        <input id="signup_UserName" type="text" class="input" name="signup_UserName" required>
+	
+        <label for="username">Email Address</label>
+        <input id="signup_Email" type="email" class="input" name="signup_Email" required>
+
+		<label for="password">Password</label>
+		<input id="signup_Password" type="password" class="input" data-type="password" name="signup_Password" required>
+
+		<label for="password">Confirm Password</label>
+		<input id="Repeat_Password" type="password" class="input" data-type="password" name="Repeat_Password" required>
+
+        <label >upload CV PDF</label>
+        <input type="file" id="Repeat_Password" name="Signup_cv" required>
+
+		<button>sign up</button>
+		<div class="hr"></div>
+		<div class="foot-lnk">
+			<a href="{% url 'Homepage' %}" class="hide-password">Back</a>
+		</div>
+	</form>
+		<!-- END signup Company -->
+
+</body>
+</html>

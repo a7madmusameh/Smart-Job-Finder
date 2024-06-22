@@ -1,0 +1,250 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SmartJobFinder</title>
+    <meta charset="utf-8">
+    <!-- icon websayt -->
+    <link rel="icon" href="{% static 'images/logo.jpg' %}">
+    
+    <!--style homepage siz with flex -->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <!--style homepage flex -->
+     <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css' rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    
+
+</head>
+
+
+<body>
+    <!-- Start Nav -->
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container-fluid px-md-4	">
+          <a class="navbar-brand" ><img src='/static/images/logo.jpg' style="width:75px;height:50px;"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu" style="color:#fbcf0b;"></span> <span style="color:#fbcf0b;">Menu</span>
+	      </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="{% url 'Homepage' %}" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#About" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#Services" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="{% url 'contactus' %}" class="nav-link">Contact Us</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{% url 'SignupUser' %}">SignupUser</a>
+                            <a class="dropdown-item" href="{% url 'SignupCompany' %}">SignupEmployeer</a>
+                            <a class="dropdown-item" href="{% url 'loginpage' %}">Login</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <!-- END Nav -->
+    
+<!-- Start Home  -->
+    <div class="hero-wrap img" style="background-image: url('/static/images/bg_2.jpg'); background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover;">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row d-md-flex no-gutters slider-text align-items-center justify-content-center">
+                <div class="col-md-10 d-flex align-items-center ftco-animate">
+                    <div class="text text-center pt-5 mt-md-5" style="position:relative;top:-60px;">
+                        <h1 class="mb-5" id="demo"></h1>
+                        <div class="ftco-search my-md-5">
+                            <div class="row">
+                                <div class="col-md-12 tab-wrap">
+                                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ <!-- END Home  -->   
+
+    <br><br>
+<!-- Start Abput  -->
+
+    <section class="bg-light" id="About">
+        <br><br><br><br>
+        <div class="container">
+            <div class="row d-flex">
+                <p style="left: 20px; max-width: 700px; font-size: 25px; padding-left: 5rem;">
+                    <span> Smart Job Finder</span> is designed to make your job search simple and efficient. We understand how challenging it can be to find the perfect job, so our platform uses advanced technology to streamline the process. With easy-to-use features, Smart Job Finder helps you connect with great career opportunities. Whether you're a new graduate, an experienced worker, or changing careers, our platform helps you find and land your ideal job effortlessly.
+                         </p>
+             <img src="{% static 'images/team-alignment.png' %}" alt="img" style="width: 40%; height: 55%; right: 20px; ">
+    
+            </div>
+        </div>
+    </section>
+
+<!-- END about  -->
+
+<br><br><br><br><br><br><br>
+
+<!-- Start services  -->
+<section class="bg-light" id="Services">
+    <br><br><br><br>
+    <div class="container">
+        <div class="row d-flex">
+            <p style="left: 20px; max-width: 700px; font-size: 25px; padding-left: 5rem;">
+                Our smart job finder platform offers a comprehensive suite of services designed to streamline the job search process 
+                and empower users to find their ideal career opportunities.<br><br>
+                We use advanced job search filters powered by AI to make your job search smooth and efficient.
+            </p>
+         <img src="{% static 'images/services.png' %}" alt="img" style="width: 40%; height: 55%; right: 20px; ">
+
+        </div>
+    </div>
+</section>
+<br><br><br>
+<!-- END services  -->
+
+<br><br><br><br><br><br><br>
+
+<!-- Start style University logo -->
+<style>
+    .client-block-img {
+        padding-bottom: 10px;
+    }
+
+    .img-fluid {
+        width: 100%;
+        height: 4cm;
+        box-shadow: 3px 3px #f4c80d, -0.4em 0 0.4em black;
+        border-radius: 25px;
+    }
+</style>
+<!-- ENd style University logo -->
+<br><br><br><br><br><br><br>
+
+    <!-- Start Footer -->
+    <footer class="ftco-footer ftco-bg-dark ftco-section" style="background-color:#343a40;">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 col-md-3 col-sm-12">
+                    <div class="ftco-footer-widget">
+                        <h2 class="ftco-heading-2" style="color:white;">Vision</h2>
+                        <p style="color:#fbcd0b;font-size:10pt;">Smart Job Finder is designed to make your job search simple and efficient.</p>
+                        <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                            <li class="ftco-animate"><a href="https://www.linkedin.com/company/SmartJobFinder/?viewAsMember=true" target="_blanck"><span class="icon-linkedin"></span></a></li>
+                            <li class="ftco-animate"><a href="https://web.facebook.com/SmartJobFinder?_rdc=1&_rdr" target="_blanck" style="color:red;"><span class="icon-facebook"></span></a></li>
+                            <li class="ftco-animate"><a href="https://www.instagram.com/SmartJobFinder" target="_blanck"><span class="icon-instagram"></span></a></li>
+                            <li class="ftco-animate"><a href="#" target="_blanck"><span class="icon-youtube"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-12">
+                    <div class="ftco-footer-widget">
+                        <h2 class="ftco-heading-2" style="color:white;">Links</h2>
+                        <a href="{% url 'Homepage' %}" id="go">Home</a>&nbsp;
+                        <span style="color:white"> | </span>&nbsp;
+                        <a href="#" id="go">Articles</a>&nbsp;
+                        <span style="color:white"> | </span>&nbsp;
+                        <a href="{% url 'contactus' %}" id="go">Contact Us</a>
+                        <span style="color:white"> | </span>&nbsp;
+                        <a href="#About" id="go">About Us</a>
+                        <span style="color:white"> | </span>&nbsp;
+                        <a href="#Services" id="go">Services</a>
+                        <span style="color:white"> | </span>&nbsp;
+                        <a href="#" id="go" target="_blank">Privacy Policy</a>
+                        <span style="color:white"> | </span>&nbsp;
+                        <a href="#" id="go" target="_blank">Terms & Conditions</a>
+                        <br>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12">
+                    <div class="ftco-footer-widget">
+                        <h2 class="ftco-heading-2" style="color:white;">Pages</h2>
+                        <a href="{% url 'loginpage' %}" id="go">Login</a>&nbsp;
+                        <span style="color:white"> | </span>&nbsp;
+                        <a href="{% url 'SignupUser' %}" id="go">Register as User</a>&nbsp;
+                        <span style="color:white"> | </span>&nbsp;
+                        <a href="{% url 'SignupCompany' %}" id="go">Register as Company</a>&nbsp;
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-12">
+                    <div class="ftco-footer-widget">
+                        <h2 class="ftco-heading-2" style="color:white;">Opportunities</h2>
+                        <ul>
+                            <li style=" color:#fbcf0b;"><a href="#" id="go">Programming Recruitment Platform</a>&nbsp;</li>
+                            <li style=" color:#fbcf0b;"><a href="#" id="go">Training for employment</a>&nbsp;</li>
+                            <li style=" color:#fbcf0b;"><a href="#" id="go">Community Programming Training</a>&nbsp;</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 text-center">
+                    <br>
+                    <p style="color:white;">Powered By <a href="#" id="go"></a></p>
+                    <p style="color:white;">
+                        Copyright &copy;
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script> All Rights Reserved | <a target="_blank" href="https://www.Yufilestack.net" id="go">SmartJobFinder</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <br>
+    </footer>
+    <style>
+        #go {
+            color: #fbcf0b;
+        }
+
+        #go:hover {
+            color: #fbcf0b;
+            font-size: 13pt;
+        }
+    </style>
+    <!-- End Footer -->
+
+    <!-- loader JS -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/aos.js' %}"></script>
+    <script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+    <script src="{% static 'js/scrollax.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>        
+</body>
+</html>
+
+<script>
+    $(document).ready(function() {
+        typeWriter();
+    });
+</script>
+<script>
+    var i = 0;
+    var txt = 'Your gateway to communication with companies and employees..';
+    var speed = 40;
+
+    function typeWriter() {
+        if (i < txt.length) {
+            document.getElementById("demo").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+</script>
+
+
+

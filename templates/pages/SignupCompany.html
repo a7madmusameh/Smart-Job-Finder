@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>SmartJobFinder</title>
+  <meta charset="utf-8">
+  <link rel="icon" href="{% static 'images/logo.jpg' %}">
+  <link rel="stylesheet" href="{% static './signupcom.css' %}">
+</head>
+<body>
+	<!-- Start signup Company -->
+	<form method="POST">
+		{% csrf_token %}
+		<h3>Signup Empolyeer</h3>
+	
+		<label for="username">CompanyName</label>
+        <input id="signup_CompanyName" type="text" class="input" name="signup_CompanyName" required>
+	
+        <label for="username">Email Address</label>
+        <input id="signup_Email" type="email" class="input" name="signup_Email" required>
+
+		<label for="password">Password</label>
+		<input id="signup_Password" type="password" class="input" data-type="password" name="signup_Password" required>
+
+		<label for="password">Confirm Password</label>
+		<input id="Repeat_Password" type="password" class="input" data-type="password" name="Repeat_Password" required>
+
+		<button>sign up</button>
+		<div class="hr"></div>
+		<div class="foot-lnk">
+			<a href="{% url 'Homepage' %}" class="hide-password">Back</a>
+		</div>
+	</form>
+		<!-- END signup Company -->
+
+</body>
+</html>
